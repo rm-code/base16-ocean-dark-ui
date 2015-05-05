@@ -42,6 +42,7 @@
     padding: 0;
     margin: 0 20px 0 5px;
     color: @text-color;
+    box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
 
     transition: color .1s ease-in;
     border: none;
@@ -108,7 +109,6 @@
   .tab.active {
     z-index: 1;
     color: @text-color-highlight;
-    box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
 
     .close-icon {
       line-height: @tab-height - 1px;
