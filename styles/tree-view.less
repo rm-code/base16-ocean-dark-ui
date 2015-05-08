@@ -2,7 +2,7 @@
 
 .tree-view {
   font-size: @font-size;
-  background-image: -webkit-linear-gradient(top, lighten(@base00, 5%), darken(@base00, 10%));
+  background-image: -webkit-linear-gradient(top, lighten(@base00, 5%), darken(@base00, 5%));
 
   .selected:before {
     background: @base00;
@@ -19,7 +19,7 @@
   opacity: 1;
 
   &:focus {
-    background-image: -webkit-linear-gradient(top, lighten(@base00, 10%), darken(@base00, 5%));
+    background-image: -webkit-linear-gradient(top, lighten(@base00, 10%), @base00);
 
     .selected:before {
       background: @background-color-selected;
