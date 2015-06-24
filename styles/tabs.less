@@ -1,85 +1,42 @@
 @import "ui-variables";
-@tab-radius: 3px;
-@modified-icon-width: 8px;
-@tab-skew: 10deg;
-@tab-top-padding: 5px;
-@tab-bottom-border-height: 5px;
-@tab-border: 1px solid @tab-border-color;
-@tab-bar-bottom-border-color: #111;
-@tab-max-width: 160px;
 
 .tab-bar {
-  height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-  background: @tab-bar-background-color;
-  padding: 0 10px 0 25px;
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: @tab-bottom-border-height;
-    left: 0;
-    right: 0;
-    background-color: @tab-background-color-active;
-    border-top: 1px solid @tab-border-color;
-    border-bottom: none;
-    pointer-events: none;
-  }
+  height: @tab-height + @tab-top-padding;
+  background: darken(@base00, 1%);
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
 
   .tab {
     position: relative;
     top: @tab-top-padding;
-    max-width: @tab-max-width;
     height: @tab-height;
     line-height: @tab-height;
-    padding: 0;
-    margin: 0 20px 0 5px;
     color: @text-color;
-    box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
+    padding-left: 0;
+    margin-left: 10px;
 
-    transition: color .1s ease-in;
-    border: none;
-
-    &, &:before, &:after {
-      background-image: -webkit-linear-gradient(top, lighten(@base00, 8%), darken(@base00, 4%));
-      height: @tab-height;
+    .title {
+      transition: .1s ease-in;
     }
 
-    &:before, &:after {
+    &, &:before {
+      background: @tab-bg-color;
+    }
+
+    &:before {
+      background: @tab-bg-color;
       content: '';
       position: absolute;
-      top: 0px;
-      width: 25px;
+      top: 0;
+      left: -16px;
       height: @tab-height;
-    }
-
-    // left angled edge
-    &:before {
-      left: -14px;
-      border-top-left-radius: @tab-radius;
-      box-shadow: inset 1px 1px 0 @tab-border-color, -4px 0px 4px rgba(0,0,0,.1);
-      -webkit-transform: skewX(-@tab-skew);
-    }
-
-    // right angled edge
-    &:after {
-      right: -14px;
-      border-top-right-radius: @tab-radius;
-      box-shadow: inset -1px 1px 0 @tab-border-color, 4px 0px 4px rgba(0,0,0,.1);
-      -webkit-transform: skewX(@tab-skew);
+      width: 16px;
     }
 
     .close-icon {
-      right: 0;
       z-index: 3;
-      text-align: right;
       line-height: @tab-height;
+      -webkit-transform: none;
       color: @text-color;
 
       &:hover {
@@ -88,8 +45,8 @@
     }
 
     &.modified:not(:hover) .close-icon {
-      right: 0;
       top: @tab-height/2 - @modified-icon-width/2 + 1px;
+      right: 14px;
       width: @modified-icon-width;
       height: @modified-icon-width;
     }
@@ -98,33 +55,29 @@
       color: @text-color-highlight;
     }
 
-    .title{
-      position: relative;
-      z-index: 1;
-      padding-right: 10px
+    &:first-child {
+      margin-left: 5px;
     }
   }
 
   .tab.active {
     z-index: 1;
+    line-height: @tab-height;
     color: @text-color-highlight;
 
+    .title{
+      position: relative;
+      transform: translateY(-1px);
+    }
+
     .close-icon {
-      line-height: @tab-height - 1px;
+      line-height: @tab-height;
       color: @text-color;
     }
 
-    &, &:before, &:after {
-      background-image: -webkit-linear-gradient(top, lighten(@tab-background-color-active, 10%), @tab-background-color-active);
-      height: @tab-height + 1px;
-    }
-
-    &:before {
-      box-shadow: inset 1px 1px 0 @tab-border-color, -4px -4px 4px rgba(0,0,0,.1);
-    }
-
-    &:after {
-      box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
+    &, &:before {
+      background-image: -webkit-linear-gradient(bottom, @base00, lighten(@base00, 2%));
+      height: @tab-height + 0px;
     }
   }
 
@@ -142,10 +95,8 @@
 
   .placeholder {
     height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-    margin-left: -9px; // center between tabs
-    pointer-events: none;
     &:after {
-      top: @tab-height + @tab-top-padding + @tab-bottom-border-height - 2px;
+      top: @tab-height + @tab-top-padding + @tab-bottom-border-height;
     }
   }
 }
