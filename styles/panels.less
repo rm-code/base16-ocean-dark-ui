@@ -13,11 +13,8 @@ atom-panel, .tool-panel {
   .text(normal);
   position: relative;
 
-  background-color: @tool-panel-background-color;
-
   &.bottom, &.panel-bottom {
-    border-top: 1px solid @tool-panel-border-color;
-    box-shadow: inset 0 1px 0 @background-color-highlight;
+      background-color: darken(@base00, 1%);
   }
 }
 
