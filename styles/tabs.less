@@ -5,6 +5,7 @@
   background: @background-color-dark;
   padding: 0 10px 0 10px;
   box-sizing: border-box;
+  border-bottom: 1px solid @tool-panel-border-color;
 
   .tab {
     position: relative;
@@ -21,6 +22,7 @@
 
     &, &:before {
       background: @tab-bg-color;
+      border-bottom: 1px solid @tool-panel-border-color;
     }
 
     &:before {
@@ -64,6 +66,7 @@
     z-index: 1;
     line-height: @tab-height;
     color: @text-color-highlight;
+    border-right: 1px solid @tool-panel-border-color;
 
     .title{
       position: relative;
@@ -78,6 +81,8 @@
     &, &:before {
       background-image: -webkit-linear-gradient(bottom, @base00, lighten(@base00, 2%));
       height: @tab-height + 0px;
+      border-bottom: none;
+      border-left: 1px solid @tool-panel-border-color;
     }
   }
 
