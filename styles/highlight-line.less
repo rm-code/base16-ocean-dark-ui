@@ -1,5 +1,12 @@
 @import "ui-variables";
 
+atom-text-editor.is-focused::shadow {
+  .find-result .region {
+    background: transparent;
+    border: 2px solid @green;
+  }
+}
+
 atom-text-editor::shadow {
   .line.highlight-line {
     background: @background-color-dark !important;
