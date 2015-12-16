@@ -2,7 +2,10 @@
 
 .tree-view {
   font-size: @font-size;
+  background: @background-color-dark;
   background-image: -webkit-linear-gradient(left, lighten(@base00, 3%), @background-color-dark);
+  background-repeat: repeat-y;
+  background-size: auto 600px;
 
   .selected:before {
     background: darken(@background-color-selected, 8%);
@@ -20,6 +23,8 @@
 
   &:focus {
     background-image: -webkit-linear-gradient(left, lighten(@base00, 5%), @background-color-dark);
+    background-repeat: repeat-y;
+    background-size: auto 600px;
 
     .selected:before {
       background: @background-color-selected;
@@ -32,5 +37,7 @@
   .tree-view .selected:before,
   .focusable-panel {
     background-image: -webkit-linear-gradient(right, lighten(@base00, 3%), @background-color-dark);
+    background-repeat: repeat-y;
+    background-size: auto 600px;
   }
 }
