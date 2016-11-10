@@ -1,7 +1,7 @@
 {
   "name": "base-16-ocean-dark-ui-theme",
   "theme": "ui",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "A dark UI theme based on base16 ocean dark",
   "repository": "https://github.com/rm-code/base16-ocean-dark-ui",
   "license": "MIT",
