@@ -1,6 +1,7 @@
 # Base 16 Ocean Dark UI Theme
 
-[![Version](https://img.shields.io/badge/Version-1.7.1-blue.svg)](https://github.com/rm-code/base16-ocean-dark-ui/releases/latest) [![Atom](https://img.shields.io/badge/Atom-1.13.0--beta0-049158.svg)](https://atom.io/) [![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE.md)
+[![Version](https://img.shields.io/badge/Version-1.7.2-blue.svg)](https://github.com/rm-code/base16-ocean-dark-ui/releases/latest)
+[![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE.md)
 
 This is a UI theme for Atom based on the [Base 16](http://chriskempson.github.io/base16/) - Ocean Dark theme.
 
